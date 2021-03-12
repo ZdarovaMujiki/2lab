@@ -1,0 +1,10 @@
+# Comment
+POP com.company.Pop
+PUSH com.company.Push
++ com.company.Plus
+- com.company.Minus
+* com.company.Mul
+/ com.company.Div
+SQRT com.company.Sqrt
+PRINT com.company.Print
+DEFINE com.company.Define

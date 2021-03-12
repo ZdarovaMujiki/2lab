@@ -1,0 +1,2 @@
+[2021-03-12 10:55:53] [INFO] [com.company.Main main]:	 program started
+[2021-03-12 10:55:54] [INFO] [com.company.ConsoleInput <init>]:	 console input created
