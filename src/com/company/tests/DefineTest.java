@@ -20,7 +20,7 @@ public class DefineTest
     public void DefineExec()
     {
         define = new Define("test", "3.5");
-
+        push = new Push("test");
 //        pop.exec();
     }
 }

@@ -1,2 +1,10 @@
-[2021-04-01 15:40:40] [INFO] [com.company.Main main]:	 program started
-[2021-04-01 15:40:40] [INFO] [com.company.ConsoleInput <init>]:	 console input created
+[2021-04-01 21:38:19] [INFO] [com.company.Main main]:	 program started
+[2021-04-01 21:38:19] [INFO] [com.company.ConsoleInput <init>]:	 console input created
+[2021-04-01 21:38:32] [INFO] [com.company.Main main]:	 current command: PRINT
+[2021-04-01 21:38:32] [WARNING] [com.company.Main printMessage]:	 Not enough elements in stack!
+[2021-04-01 21:38:39] [INFO] [com.company.Main main]:	 current command: PUSH asd
+[2021-04-01 21:38:39] [WARNING] [com.company.Main printMessage]:	 Bad digit!
+[2021-04-01 21:46:51] [INFO] [com.company.Main main]:	 current command: PUSH 12a
+[2021-04-01 21:46:51] [WARNING] [com.company.Main printMessage]:	 Bad digit!
+[2021-04-01 21:46:57] [INFO] [com.company.Main main]:	 current command: PUSH a23
+[2021-04-01 21:46:57] [WARNING] [com.company.Main printMessage]:	 Bad digit!

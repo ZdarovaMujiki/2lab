@@ -72,7 +72,7 @@ public class Main
         }
         logger.log(Level.INFO, "program finished");
     }
-    protected static void printMessage(String message)
+    public static void printMessage(String message)
     {
         System.out.println(message);
         logger.log(Level.WARNING, message);
