@@ -20,14 +20,14 @@ public class Push implements Operation
         if (map.containsKey(argument))
         {
             stack.push(map.get(argument));
-            Main.logger.log(Level.INFO, map.get(argument) + " pushed, stack size: " + stack.size());
+            logger.log(Level.INFO, map.get(argument) + " pushed, stack size: " + stack.size());
         }
         else
         {
             try
             {
                 stack.push(Double.valueOf(argument));
-                Main.logger.log(Level.INFO, Double.valueOf(argument) + " pushed, stack size: " + stack.size());
+                logger.log(Level.INFO, Double.valueOf(argument) + " pushed, stack size: " + stack.size());
             } catch (NumberFormatException e)
             {
                 Main.printMessage("Bad digit!");

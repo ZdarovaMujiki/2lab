@@ -1,10 +1,35 @@
-[2021-04-01 21:38:19] [INFO] [com.company.Main main]:	 program started
-[2021-04-01 21:38:19] [INFO] [com.company.ConsoleInput <init>]:	 console input created
-[2021-04-01 21:38:32] [INFO] [com.company.Main main]:	 current command: PRINT
-[2021-04-01 21:38:32] [WARNING] [com.company.Main printMessage]:	 Not enough elements in stack!
-[2021-04-01 21:38:39] [INFO] [com.company.Main main]:	 current command: PUSH asd
-[2021-04-01 21:38:39] [WARNING] [com.company.Main printMessage]:	 Bad digit!
-[2021-04-01 21:46:51] [INFO] [com.company.Main main]:	 current command: PUSH 12a
-[2021-04-01 21:46:51] [WARNING] [com.company.Main printMessage]:	 Bad digit!
-[2021-04-01 21:46:57] [INFO] [com.company.Main main]:	 current command: PUSH a23
-[2021-04-01 21:46:57] [WARNING] [com.company.Main printMessage]:	 Bad digit!
+[2021-04-01 22:03:03] [INFO] [com.company.Main main]:	 program started
+[2021-04-01 22:03:03] [INFO] [com.company.ConsoleInput <init>]:	 console input created
+[2021-04-01 22:03:36] [INFO] [com.company.Main main]:	 current command: PRINT
+[2021-04-01 22:03:36] [WARNING] [com.company.Main printMessage]:	 Not enough elements in stack!
+[2021-04-01 22:03:38] [INFO] [com.company.Main main]:	 current command: PoP
+[2021-04-01 22:03:38] [WARNING] [com.company.Main printMessage]:	 No such operation!
+[2021-04-01 22:04:05] [INFO] [com.company.Main main]:	 current command: POP
+[2021-04-01 22:04:06] [WARNING] [com.company.Main printMessage]:	 Not enough elements in stack!
+[2021-04-01 22:04:09] [INFO] [com.company.Main main]:	 current command: print
+[2021-04-01 22:04:09] [WARNING] [com.company.Main printMessage]:	 No such operation!
+[2021-04-01 22:04:13] [INFO] [com.company.Main main]:	 current command: #asd
+[2021-04-01 22:04:14] [INFO] [com.company.Main main]:	 current command: asd
+[2021-04-01 22:04:14] [WARNING] [com.company.Main printMessage]:	 No such operation!
+[2021-04-01 22:04:17] [INFO] [com.company.Main main]:	 current command: PUSH 2
+[2021-04-01 22:04:17] [INFO] [com.company.operations.Push exec]:	 2.0 pushed, stack size: 1
+[2021-04-01 22:04:21] [INFO] [com.company.Main main]:	 current command: PrINT
+[2021-04-01 22:04:21] [WARNING] [com.company.Main printMessage]:	 No such operation!
+[2021-04-01 22:04:23] [INFO] [com.company.Main main]:	 current command: PRINT
+[2021-04-01 22:04:23] [INFO] [com.company.operations.Print exec]:	 2.0 printed, stack size: 1
+[2021-04-01 22:04:26] [INFO] [com.company.Main main]:	 current command: QSRT
+[2021-04-01 22:04:26] [WARNING] [com.company.Main printMessage]:	 No such operation!
+[2021-04-01 22:04:31] [INFO] [com.company.Main main]:	 current command: SQRT
+[2021-04-01 22:04:31] [INFO] [com.company.operations.Sqrt exec]:	 sqrt(2.0) = 1.4142135623730951 pushed, stack size: 1
+[2021-04-01 22:04:33] [INFO] [com.company.Main main]:	 current command: PRINT
+[2021-04-01 22:04:33] [INFO] [com.company.operations.Print exec]:	 1.4142135623730951 printed, stack size: 1
+[2021-04-01 22:04:35] [INFO] [com.company.Main main]:	 current command: POP
+[2021-04-01 22:04:35] [INFO] [com.company.operations.Pop exec]:	 1.4142135623730951 popped, stack size: 0
+[2021-04-01 22:04:37] [INFO] [com.company.Main main]:	 current command: PRINT
+[2021-04-01 22:04:37] [WARNING] [com.company.Main printMessage]:	 Not enough elements in stack!
+[2021-04-01 22:05:14] [INFO] [com.company.Main main]:	 current command: POP
+[2021-04-01 22:05:14] [WARNING] [com.company.Main printMessage]:	 Not enough elements in stack!
+[2021-04-01 22:05:20] [INFO] [com.company.Main main]:	 current command: PUSH
+[2021-04-01 22:05:20] [WARNING] [com.company.Main printMessage]:	 Wrong amount of args!
+[2021-04-01 22:05:33] [INFO] [com.company.Main main]:	 current command: PRINT
+[2021-04-01 22:05:33] [WARNING] [com.company.Main printMessage]:	 Not enough elements in stack!

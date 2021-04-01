@@ -13,13 +13,30 @@ public class Define implements Operation
 
     public Define(String word, String a)
     {
+        if
         this.word = word;
         digit = Double.valueOf(a);
-        Main.logger.log(Level.INFO, word + " = " + digit + " defined");
+        logger.log(Level.INFO, word + " = " + digit + " defined");
     }
 
     @Override
     public void exec(Stack<Double> stack, HashMap<String, Double> map) {
         map.put(word, digit);
+    }
+
+    public static boolean isNumeric(String str)
+    {
+        if (str == null)
+        {
+            return false;
+        }
+        try
+        {
+            double d = Double.parseDouble(str);
+        } catch (NumberFormatException e)
+        {
+            return false;
+        }
+        return true;
     }
 }
