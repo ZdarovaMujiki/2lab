@@ -1,16 +1,16 @@
 package com.company;
 
+import com.company.operations.Operation;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class OperationCreator
 {
-    Logger logger = Logger.getLogger(Main.class.getName());
     HashMap<String, String> map = new HashMap<>();
     OperationCreator()
     {
@@ -27,8 +27,7 @@ public class OperationCreator
         }
         catch (IOException | NullPointerException e)
         {
-            logger.log(Level.WARNING, e.toString() + ", no file 'conf', shutting down");
-            e.printStackTrace();
+            Main.logger.log(Level.WARNING, e.toString() + ", no file 'conf', shutting down");
             System.exit(-1);
         }
     }
@@ -36,16 +35,16 @@ public class OperationCreator
     public Operation createOperation(String command) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException
     {
         String[] splitCommand = command.split(" ");
-        Object[] args = new Object[splitCommand.length - 1];
-        Class[] classes = new Class[splitCommand.length - 1];
-        for (int i = 0; i < splitCommand.length - 1; ++i)
+        int commandAmount = splitCommand.length - 1;
+        Object[] args = new Object[commandAmount];
+        var classes = new Class[commandAmount];
+        for (int i = 0; i < commandAmount; ++i)
         {
             args[i] = splitCommand[i + 1];
             classes[i] = String.class;
         }
         if (map.containsKey(splitCommand[0]))
         {
-//            logger.log(Level.INFO, "creating object of class " + map.get(splitCommand[0]) + " with args " + Arrays.toString(args));
             return (Operation) Class.forName(map.get(splitCommand[0])).getDeclaredConstructor(classes).newInstance(args);
         }
         else

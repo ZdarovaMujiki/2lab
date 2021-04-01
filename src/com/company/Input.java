@@ -16,18 +16,17 @@ public interface Input
 
 class FileInput implements Input
 {
-    Logger logger = Logger.getLogger(Main.class.getName());
     BufferedReader reader;
     FileInput(String filename)
     {
         try
         {
             reader = new BufferedReader(new FileReader(filename));
-            logger.log(Level.INFO, "file input created, file: " + filename);
+            Main.logger.log(Level.INFO, "file input created, file: " + filename);
         } catch (FileNotFoundException e)
         {
             e.printStackTrace();
-            logger.log(Level.WARNING, e.toString());
+            Main.logger.log(Level.WARNING, e.toString());
         }
     }
     @Override
@@ -38,8 +37,7 @@ class FileInput implements Input
             return reader.readLine();
         } catch (IOException e)
         {
-            e.printStackTrace();
-            logger.log(Level.WARNING, e.toString());
+            Main.printMessage(e.getMessage());
         }
         return null;
     }
@@ -53,17 +51,18 @@ class FileInput implements Input
 
 class ConsoleInput implements Input
 {
-    Logger logger = Logger.getLogger(Main.class.getName());
     Scanner scanner;
     ConsoleInput()
     {
         scanner = new Scanner(System.in).useDelimiter("\n");
-        logger.log(Level.INFO, "console input created");
+        Main.logger.log(Level.INFO, "console input created");
     }
     @Override
     public String getLine()
     {
-        return scanner.next();
+        String str;
+        while((str = scanner.next()).length() == 0);
+        return str;
     }
 
     @Override
