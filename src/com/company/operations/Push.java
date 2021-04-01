@@ -10,7 +10,7 @@ public class Push implements Operation
 {
     String argument;
 
-    Push(String argument) {
+    public Push(String argument) {
         this.argument = argument;
     }
 
