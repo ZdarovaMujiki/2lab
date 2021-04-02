@@ -12,15 +12,8 @@ public class Sqrt implements Operation
     @Override
     public void exec(Stack<Double> stack, HashMap<String, Double> map)
     {
-        if (!stack.empty())
-        {
-            Double a = stack.pop();
-            stack.push(Math.sqrt(a));
-            Main.logger.log(Level.INFO, "sqrt(" + a + ") = " + Math.sqrt(a) + " pushed, stack size: " + stack.size());
-        }
-        else
-        {
-            throw new EmptyStackException();
-        }
+        Double a = stack.pop();
+        stack.push(Math.sqrt(a));
+        logger.log(Level.INFO, "sqrt(" + a + ") = " + Math.sqrt(a) + " pushed, stack size: " + stack.size());
     }
 }

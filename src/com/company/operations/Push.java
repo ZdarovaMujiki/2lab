@@ -24,14 +24,8 @@ public class Push implements Operation
         }
         else
         {
-            try
-            {
-                stack.push(Double.valueOf(argument));
-                logger.log(Level.INFO, Double.valueOf(argument) + " pushed, stack size: " + stack.size());
-            } catch (NumberFormatException e)
-            {
-                Main.printMessage("Bad digit!");
-            }
+            stack.push(Double.valueOf(argument));
+            logger.log(Level.INFO, Double.valueOf(argument) + " pushed, stack size: " + stack.size());
         }
     }
 }

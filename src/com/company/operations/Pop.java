@@ -12,15 +12,7 @@ public class Pop implements Operation
     @Override
     public void exec(Stack<Double> stack, HashMap<String, Double> map)
     {
-        if (!stack.empty())
-        {
-//            Main.logger.log(Level.INFO, stack.peek() + " popped, stack size: " + (stack.size() - 1));
-            logger.log(Level.INFO, stack.peek() + " popped, stack size: " + (stack.size() - 1));
-            stack.pop();
-        }
-        else
-        {
-            throw new EmptyStackException();
-        }
+        logger.log(Level.INFO, stack.peek() + " popped, stack size: " + (stack.size() - 1));
+        stack.pop();
     }
 }

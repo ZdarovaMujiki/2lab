@@ -12,14 +12,7 @@ public class Print implements Operation
     @Override
     public void exec(Stack<Double> stack, HashMap<String, Double> map)
     {
-        if (!stack.empty())
-        {
-            System.out.println(stack.peek());
-            Main.logger.log(Level.INFO, stack.peek() + " printed, stack size: " + stack.size());
-        }
-        else
-        {
-            throw new EmptyStackException();
-        }
+        System.out.println(stack.peek());
+        logger.log(Level.INFO, stack.peek() + " printed, stack size: " + stack.size());
     }
 }

@@ -37,7 +37,8 @@ public class OperationCreator
         String[] splitCommand = command.split(" ");
         int commandAmount = splitCommand.length - 1;
         Object[] args = new Object[commandAmount];
-        var classes = new Class[commandAmount];
+        Class[] classes = new Class[commandAmount];
+
         for (int i = 0; i < commandAmount; ++i)
         {
             args[i] = splitCommand[i + 1];
