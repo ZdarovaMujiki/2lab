@@ -54,7 +54,7 @@ public class Main
                         throw e.getTargetException();
                     } catch (Throwable t)
                     {
-                        printMessage(t.getMessage());
+                        printMessage(t.toString());
                     }
                 } catch (ClassNotFoundException e)
                 {
@@ -65,6 +65,13 @@ public class Main
                 } catch (EmptyStackException e)
                 {
                     printMessage("Not enough elements in stack!");
+                } catch (NumberFormatException e)
+                {
+                    printMessage("Bad digit!");
+                }
+                catch (ArithmeticException e)
+                {
+                    printMessage("Dividing by zero!");
                 }
             }
             command = input.getLine();

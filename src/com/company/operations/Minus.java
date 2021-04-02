@@ -17,7 +17,7 @@ public class Minus implements Operation
             Double a = stack.pop();
             Double b = stack.pop();
             stack.push(a - b);
-            Main.logger.log(Level.INFO, a + " - " + b + " = " + (a - b) + " pushed, stack size: " + stack.size());
+            logger.log(Level.INFO, a + " - " + b + " = " + (a - b) + " pushed, stack size: " + stack.size());
         }
         else
         {

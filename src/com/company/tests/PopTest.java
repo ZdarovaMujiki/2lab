@@ -13,7 +13,7 @@ public class PopTest
     Stack<Double> stack = new Stack<>();
 
     @Test
-    public void popExec()
+    public void PopExec()
     {
         int testAmount = 5;
         for (int i = 0; i < testAmount; i++)
@@ -33,7 +33,7 @@ public class PopTest
     }
 
     @Test
-    public void popException()
+    public void PopException()
     {
         stack.push(5.0);
         pop.exec(stack, null);
