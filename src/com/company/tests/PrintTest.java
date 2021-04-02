@@ -10,8 +10,8 @@ import java.util.Stack;
 
 public class PrintTest
 {
-    Operation print = new Print();
-    Stack<Double> stack = new Stack<>();
+    private Operation print = new Print();
+    private Stack<Double> stack = new Stack<>();
     @Test
     public void PlusExec()
     {
@@ -24,6 +24,6 @@ public class PrintTest
     @Test
     public void PrintException()
     {
-        Assert.assertThrows(EmptyStackException.class, () -> { print.exec(stack, null); });
+        Assert.assertThrows(EmptyStackException.class, () -> print.exec(stack, null));
     }
 }

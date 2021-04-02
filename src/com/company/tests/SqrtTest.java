@@ -11,8 +11,8 @@ import java.util.Stack;
 
 public class SqrtTest
 {
-    Operation sqrt = new Sqrt();
-    Stack<Double> stack = new Stack<>();
+    private Operation sqrt = new Sqrt();
+    private Stack<Double> stack = new Stack<>();
 
     @Test
     public void SqrtExec()
@@ -27,6 +27,6 @@ public class SqrtTest
     @Test
     public void SqrtException()
     {
-        Assert.assertThrows(EmptyStackException.class, () -> { sqrt.exec(stack, null); });
+        Assert.assertThrows(EmptyStackException.class, () -> sqrt.exec(stack, null));
     }
 }

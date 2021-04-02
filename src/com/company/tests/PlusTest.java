@@ -13,8 +13,8 @@ import static org.junit.Assert.*;
 
 public class PlusTest
 {
-    Operation plus = new Plus();
-    Stack<Double> stack = new Stack<>();
+    private Operation plus = new Plus();
+    private Stack<Double> stack = new Stack<>();
     @Test
     public void PlusExec()
     {
@@ -29,8 +29,8 @@ public class PlusTest
     @Test
     public void PlusException()
     {
-        Assert.assertThrows(EmptyStackException.class, () -> { plus.exec(stack, null); });
+        Assert.assertThrows(EmptyStackException.class, () -> plus.exec(stack, null));
         stack.push(0.0);
-        Assert.assertThrows(EmptyStackException.class, () -> { plus.exec(stack, null); });
+        Assert.assertThrows(EmptyStackException.class, () -> plus.exec(stack, null));
     }
 }

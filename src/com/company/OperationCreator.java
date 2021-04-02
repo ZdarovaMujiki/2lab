@@ -9,9 +9,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.logging.Level;
 
-public class OperationCreator
+class OperationCreator
 {
-    HashMap<String, String> map = new HashMap<>();
+    private HashMap<String, String> map = new HashMap<>();
     OperationCreator()
     {
         try
@@ -32,7 +32,7 @@ public class OperationCreator
         }
     }
 
-    public Operation createOperation(String command) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException
+    Operation createOperation(String command) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException
     {
         String[] splitCommand = command.split(" ");
         int commandAmount = splitCommand.length - 1;

@@ -11,9 +11,9 @@ import java.util.Stack;
 
 public class PushTest
 {
-    Operation push;
-    Stack<Double> stack = new Stack<>();
-    HashMap<String, Double> map = new HashMap<>();
+    private Operation push;
+    private Stack<Double> stack = new Stack<>();
+    private HashMap<String, Double> map = new HashMap<>();
 
     @Test
     public void PushExec()
@@ -27,6 +27,6 @@ public class PushTest
     public void PushException()
     {
         push = new Push("asd");
-        Assert.assertThrows(NumberFormatException.class, () -> { push.exec(stack, map); });
+        Assert.assertThrows(NumberFormatException.class, () -> push.exec(stack, map));
     }
 }

@@ -8,7 +8,7 @@ import java.util.logging.Level;
 
 public class Push implements Operation
 {
-    String argument;
+    private String argument;
 
     public Push(String argument) {
         this.argument = argument;
